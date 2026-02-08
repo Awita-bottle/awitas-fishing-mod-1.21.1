@@ -24,4 +24,13 @@ public class CustomFishEntity extends PathAwareEntity {
             case FIGHTING -> fightPlayer();
         }
     }
+
+    private void fightPlayer() {
+    }
+
+    private void pullHook() {
+    }
+
+    private void circleHook() {
+    }
 }
