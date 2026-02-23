@@ -1,6 +1,6 @@
 package net.awita.awitafm.block;
 
-import net.awita.awfishm.AwitasFishingMod;
+import net.awita.awitafm.AwitasFishingMod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;

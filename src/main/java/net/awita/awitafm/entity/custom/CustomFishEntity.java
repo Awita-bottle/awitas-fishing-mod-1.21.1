@@ -7,30 +7,7 @@ import net.minecraft.world.World;
 
 public class CustomFishEntity extends PathAwareEntity {
 
-    private FishBehavior behavior;
-    private FishingState state = FishingState.SCOUTING;
-
-    public CustomFishEntity(EntityType<? extends PathAwareEntity> type, World world) {
-        super(type, world);
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-
-        switch (state) {
-            case SCOUTING -> circleHook();
-            case HOOKED -> pullHook();
-            case FIGHTING -> fightPlayer();
-        }
-    }
-
-    private void fightPlayer() {
-    }
-
-    private void pullHook() {
-    }
-
-    private void circleHook() {
+    protected CustomFishEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+        super(entityType, world);
     }
 }

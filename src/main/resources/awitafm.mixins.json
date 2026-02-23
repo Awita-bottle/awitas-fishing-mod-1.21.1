@@ -3,7 +3,7 @@
 	"package": "net.awita.awitafm.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"AllowModdedRodsMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

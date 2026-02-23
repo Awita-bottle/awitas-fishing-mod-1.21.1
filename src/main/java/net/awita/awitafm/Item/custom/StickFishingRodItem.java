@@ -28,7 +28,7 @@ public class StickFishingRodItem extends Item {
 
         if (!world.isClient) {
             CustomFishingHookEntity hook =
-                    new CustomFishingHookEntity(player, world);
+                    new CustomFishingHookEntity(player.getType(), world);
             world.spawnEntity(hook);
         }
 
