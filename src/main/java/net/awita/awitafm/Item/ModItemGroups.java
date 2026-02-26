@@ -12,13 +12,21 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
-    public static final ItemGroup AWITAS_FISHING_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(AwitasFishingMod.MOD_ID,"awitas_fishing_overhaul"),
+    public static final ItemGroup AWITAS_FISHING_ITEMS_GROUP = Registry.register(
+            Registries.ITEM_GROUP,
+            Identifier.of(
+                    AwitasFishingMod.MOD_ID,
+                    "awitas_fishing_overhaul"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.WORM_BAIT))
                     .displayName(Text.translatable("itemgroup.awitafm.awitas_fishing_overhaul"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.WORM_BAIT);
                         entries.add(ModBlocks.FISH_BASKET_BLOCK);
-                        entries.add(ModItems.AWITAROD);
+                        entries.add(ModItems.IRON_ROD);
+                        entries.add(ModItems.DEFAULT_BOBBER);
+                        entries.add(ModItems.STRING_LINE);
+                        entries.add(ModItems.FLY_LURE);
+                        entries.add(ModItems.IRON_REEL);
 
 
                     }).build());
