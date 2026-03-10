@@ -1,7 +1,7 @@
 package net.awita.awitafm.registry;
 
 import net.awita.awitafm.AwitasFishingMod;
-import net.awita.awitafm.entity.custom.CustomFishingHookEntity;
+import net.awita.awitafm.entity.custom.FishingHookEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
@@ -12,12 +12,12 @@ import net.minecraft.util.Identifier;
 
 public class ModEntities
 {
-    public static final EntityType<CustomFishingHookEntity> CUSTOM_FISHING_HOOK =
+    public static final EntityType<FishingHookEntity> CUSTOM_FISHING_HOOK =
             Registry.register(
                     Registries.ENTITY_TYPE,
                     Identifier.of(AwitasFishingMod.MOD_ID, "custom_fishing_hook"),
                     EntityType.Builder
-                            .<CustomFishingHookEntity>create(CustomFishingHookEntity::new, SpawnGroup.MISC)
+                            .<FishingHookEntity>create(FishingHookEntity::new, SpawnGroup.MISC)
                             .dimensions(0.25f, 0.25f)
                             .build()
             );

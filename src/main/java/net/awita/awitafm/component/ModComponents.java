@@ -1,7 +1,7 @@
 package net.awita.awitafm.component;
 
 import net.awita.awitafm.AwitasFishingMod;
-import net.awita.awitafm.Item.custom.Bait;
+import net.awita.awitafm.Item.custom.FishingBait;
 import net.minecraft.component.ComponentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -9,12 +9,12 @@ import net.minecraft.util.Identifier;
 
 public class ModComponents {
 
-    public static final ComponentType<Bait.BAIT_TYPE> BAIT_COMPONENT_TYPE =
+    public static final ComponentType<FishingBait.TYPE> BAIT_COMPONENT_TYPE =
             Registry.register(
                     Registries.DATA_COMPONENT_TYPE,
                     Identifier.of(AwitasFishingMod.MOD_ID, "bait_type"),
-                    ComponentType.<Bait.BAIT_TYPE>builder()
-                            .codec(Bait.CODEC)
+                    ComponentType.<FishingBait.TYPE>builder()
+                            .codec(FishingBait.CODEC)
                             .build()    
             );
 

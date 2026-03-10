@@ -1,26 +1,24 @@
 package net.awita.awitafm.Item.custom;
 
+import net.awita.awitafm.Item.custom.FishingBait.TYPE;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class FishingLine extends BaseModItem<FishingLine.TYPE>
+public class FishingLegendaryItem extends BaseModItem<TYPE>
 {
-    
-    public enum TYPE
+    public FishingLegendaryItem(Item.Settings settings)
     {
-        DEFAULT,
-        CHAIN,
-        DIAMOND
+        super(settings, TYPE.DEFAULT);
     }
-
+    
     @Override
     public Text getName(ItemStack stack)
     {
         switch (getType()) {
             case DEFAULT:
-                return Text.translatable("item.awitafm.line_default");
+                return Text.translatable("item.awitafm.legendary_rod");
             default:
                 return super.getName(stack);
         }
@@ -31,15 +29,9 @@ public class FishingLine extends BaseModItem<FishingLine.TYPE>
     {
         if (getType() == null) return null;
         return switch (getType()) {
-            case DEFAULT -> Identifier.of("awitafm", "lines/default_line.png");
+            case DEFAULT -> Identifier.of("awitafm", "loot/legendary_rod.png");
             default -> Identifier.of("", "");
         };
     }
 
-    public FishingLine(Item.Settings settings, TYPE type)
-    {
-        super(settings, type);
-    }
-
-    public FishingLine getLine() { return this; }
 }

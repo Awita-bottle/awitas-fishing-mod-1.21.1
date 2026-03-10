@@ -5,13 +5,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class FishingLine extends BaseModItem<FishingLine.TYPE>
+public class FishingReel extends BaseModItem<FishingReel.TYPE>
 {
-    
+
     public enum TYPE
     {
         DEFAULT,
-        CHAIN,
         DIAMOND
     }
 
@@ -20,26 +19,26 @@ public class FishingLine extends BaseModItem<FishingLine.TYPE>
     {
         switch (getType()) {
             case DEFAULT:
-                return Text.translatable("item.awitafm.line_default");
+                return Text.translatable("item.awitafm.reel_default");
             default:
                 return super.getName(stack);
         }
     }
-
+    
     @Override
     protected Identifier setTexture()
     {
         if (getType() == null) return null;
         return switch (getType()) {
-            case DEFAULT -> Identifier.of("awitafm", "lines/default_line.png");
+            case DEFAULT -> Identifier.of("awitafm", "reels/default_reel.png");
             default -> Identifier.of("", "");
         };
     }
 
-    public FishingLine(Item.Settings settings, TYPE type)
+    public FishingReel(Item.Settings settings, TYPE type)
     {
         super(settings, type);
     }
 
-    public FishingLine getLine() { return this; }
+    public FishingReel getReel() { return this; }
 }

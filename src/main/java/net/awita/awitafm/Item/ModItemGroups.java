@@ -19,16 +19,17 @@ public class ModItemGroups
             Identifier.of(
                     AwitasFishingMod.MOD_ID,
                     "awitas_fishing_overhaul"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.WORM_BAIT))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.LEGENDARY))
                     .displayName(Text.translatable("itemgroup.awitafm.awitas_fishing_overhaul"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModItems.WORM_BAIT);
                         entries.add(ModBlocks.FISH_BASKET_BLOCK);
-                        entries.add(ModItems.IRON_ROD);
+                        entries.add(ModItems.WORM_BAIT);
+                        entries.add(ModItems.OAK_ROD);
                         entries.add(ModItems.DEFAULT_BOBBER);
                         entries.add(ModItems.STRING_LINE);
                         entries.add(ModItems.FLY_LURE);
                         entries.add(ModItems.IRON_REEL);
+                        entries.add(ModItems.LEGENDARY);
 
 
                     }).build());
