@@ -1,7 +1,8 @@
 package net.awita.awitafm.Item;
 
 import net.awita.awitafm.AwitasFishingMod;
-import net.awita.awitafm.block.ModBlocks;
+import net.awita.awitafm.registry.ModBlocks;
+import net.awita.awitafm.registry.ModItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -10,7 +11,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-public class ModItemGroups {
+public class ModItemGroups
+{
 
     public static final ItemGroup AWITAS_FISHING_ITEMS_GROUP = Registry.register(
             Registries.ITEM_GROUP,
@@ -31,7 +33,8 @@ public class ModItemGroups {
 
                     }).build());
 
-    public static void registerItemGroups(){
+    public static void registerItemGroups()
+    {
         AwitasFishingMod.LOGGER.info("Registering Item Groups for " + AwitasFishingMod.MOD_ID);
     }
 }

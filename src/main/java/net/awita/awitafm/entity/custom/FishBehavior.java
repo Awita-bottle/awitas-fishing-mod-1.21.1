@@ -1,4 +1,5 @@
 package net.awita.awitafm.entity.custom;
 
-public class FishBehavior {
+public class FishBehavior
+{
 }

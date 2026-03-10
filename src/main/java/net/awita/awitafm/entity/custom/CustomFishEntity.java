@@ -7,7 +7,8 @@ import net.minecraft.world.World;
 
 public class CustomFishEntity extends PathAwareEntity {
 
-    protected CustomFishEntity(EntityType<? extends PathAwareEntity> entityType, World world) {
+    protected CustomFishEntity(EntityType<? extends PathAwareEntity> entityType, World world)
+    {
         super(entityType, world);
     }
 }

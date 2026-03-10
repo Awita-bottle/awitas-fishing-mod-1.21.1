@@ -1,4 +1,4 @@
-package net.awita.awitafm.block;
+package net.awita.awitafm.registry;
 
 import net.awita.awitafm.AwitasFishingMod;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -12,7 +12,8 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class ModBlocks {
+public class ModBlocks
+{
 
     public static final Block FISH_BASKET_BLOCK = registerBlock("fish_basket_block",
             new Block(AbstractBlock.Settings.create().strength(0f).sounds(BlockSoundGroup.WET_GRASS)));

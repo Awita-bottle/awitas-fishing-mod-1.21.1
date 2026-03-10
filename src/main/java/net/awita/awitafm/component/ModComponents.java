@@ -9,13 +9,14 @@ import net.minecraft.util.Identifier;
 
 public class ModComponents {
 
-    public static final ComponentType<Bait> BAIT_COMPONENT_TYPE = Registry.register(
-            Registries.DATA_COMPONENT_TYPE,
-            Identifier.of(
-                    AwitasFishingMod.MOD_ID,
-                    "bait_type"),
-            ComponentType.<Bait>builder().codec(null).build()
-    );
+    public static final ComponentType<Bait.BAIT_TYPE> BAIT_COMPONENT_TYPE =
+            Registry.register(
+                    Registries.DATA_COMPONENT_TYPE,
+                    Identifier.of(AwitasFishingMod.MOD_ID, "bait_type"),
+                    ComponentType.<Bait.BAIT_TYPE>builder()
+                            .codec(Bait.CODEC)
+                            .build()    
+            );
 
     public static void initialize() {
         AwitasFishingMod.LOGGER.info("Registering {} components", AwitasFishingMod.MOD_ID);

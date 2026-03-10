@@ -12,26 +12,31 @@ import net.minecraft.entity.projectile.FishingBobberEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.world.World;
 
-public class CustomFishingHookEntity extends FishingBobberEntity {
+public class CustomFishingHookEntity extends FishingBobberEntity
+{
 
-    public CustomFishingHookEntity(EntityType<?> type, World world) {
+    public CustomFishingHookEntity(EntityType<? extends FishingBobberEntity> type, World world)
+    {
         super(type, world);
     }
     private static final TrackedData<Integer> HOOK_ENTITY_ID = DataTracker.registerData(FishingBobberEntity.class, TrackedDataHandlerRegistry.INTEGER);
     private static final TrackedData<Boolean> CAUGHT_FISH = DataTracker.registerData(FishingBobberEntity.class, TrackedDataHandlerRegistry.BOOLEAN);
 
     @Override
-    protected void initDataTracker(DataTracker.Builder builder) {
+    protected void initDataTracker(DataTracker.Builder builder)
+    {
         builder.add(HOOK_ENTITY_ID, 0);
         builder.add(CAUGHT_FISH, false);
     }
     @Override
-    protected void readCustomDataFromNbt(NbtCompound nbt) {
+    public void readCustomDataFromNbt(NbtCompound nbt)
+    {
 
     }
 
     @Override
-    protected void writeCustomDataToNbt(NbtCompound nbt) {
+    public void writeCustomDataToNbt(NbtCompound nbt)
+    {
 
     }
 }

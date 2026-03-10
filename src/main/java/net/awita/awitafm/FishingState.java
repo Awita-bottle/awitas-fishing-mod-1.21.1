@@ -1,6 +1,7 @@
 package net.awita.awitafm;
 
-public enum FishingState {
+public enum FishingState
+{
     WAITING,
     SCOUTING,
     HOOKED,

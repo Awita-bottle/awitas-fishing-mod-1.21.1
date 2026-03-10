@@ -1,6 +1,7 @@
 package net.awita.awitafm.Item.custom;
 
 import net.awita.awitafm.entity.custom.CustomFishingHookEntity;
+import net.awita.awitafm.registry.ModEntities;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.FishingRodItem;
 import net.minecraft.item.ItemStack;
@@ -8,11 +9,20 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 
-public class CustomFishingRodBaseItem extends FishingRodItem {
-    public CustomFishingRodBaseItem(Settings settings, ROD_TYPE type) {
+public class FishingRodBase extends FishingRodItem {
+    public FishingRodBase(Settings settings, ROD_TYPE type) {
         super(settings);
         this.type = type;
     }
+
+    public enum ROD_TYPE
+    {
+        IRON,
+        DIAMOND,
+        NETHERITE
+    }
+
+
     private final ROD_TYPE type;
     private int tensionCap = 100;
 
@@ -54,7 +64,7 @@ public class CustomFishingRodBaseItem extends FishingRodItem {
 
         if (!world.isClient) {
             CustomFishingHookEntity hook =
-                    new CustomFishingHookEntity(player.getType(), world);
+                    new CustomFishingHookEntity(ModEntities.CUSTOM_FISHING_HOOK, world);
             world.spawnEntity(hook);
         }
 
