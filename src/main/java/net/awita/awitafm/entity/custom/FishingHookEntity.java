@@ -24,6 +24,7 @@ public class FishingHookEntity extends Entity {
         this.owner = owner;
 
         // Spawn at the player's eye level
+        // ERROR
         Vec3d pos = owner.getPos().add(0, owner.getEyeHeight() - 0.1, 0);
         this.setPosition(pos.x, pos.y, pos.z);
     }
